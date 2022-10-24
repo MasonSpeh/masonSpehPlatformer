@@ -15,7 +15,18 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         ExplorerTransform = GameObject.Find("Explorer").transform;
+    }
 
+    private void Awake() 
+    {
+        instance = this;
+    }
+
+   
+
+    public void Respawn()
+    {
+        ExplorerTransform.position = respawnPoint.position;
     }
 
 
