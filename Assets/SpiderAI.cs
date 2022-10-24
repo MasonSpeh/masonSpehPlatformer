@@ -17,7 +17,7 @@ public class SpiderAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isLitUp = true;
+        isLitUp = false;
         rb2 = GetComponent<Rigidbody2D>();
         rb2.isKinematic = false;
     }
