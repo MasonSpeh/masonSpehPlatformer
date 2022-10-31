@@ -41,10 +41,18 @@ public class SpiderAI : MonoBehaviour
 
 
             if (distance < 16)
-            {
-                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed2 * Time.deltaTime);
-                transform.rotation = Quaternion.Euler(Vector3.forward * angle);
-            }
+                if (isLitUp == true)
+                {
+                    {
+                        transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed2 * Time.deltaTime);
+                        transform.rotation = Quaternion.Euler(Vector3.forward * angle);
+                    }
+                }
+                else
+                {
+                    rb2.isKinematic = true;
+                }
+            
         }
         
       

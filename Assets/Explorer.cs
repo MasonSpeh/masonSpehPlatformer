@@ -12,6 +12,12 @@ public class Explorer : MonoBehaviour
     public Rock RockPrefab;
     public Transform DirectionShoot;
     public bool FacingRight;
+    private Inventory inventory;
+    public int hamt = 5;
+    public int maxRocks = 4;
+    private int currentRocks;
+
+    [SerializeField] private UIInventory uiInventory;
   
    
 
@@ -19,7 +25,11 @@ public class Explorer : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        currentRocks = 4;
         rb = GetComponent<Rigidbody2D>();
+        inventory = new Inventory();
+
+        uiInventory.SetInventory(inventory);
         
     }
 
@@ -64,13 +74,27 @@ public class Explorer : MonoBehaviour
             }
         }
 
-      
+        
 
         if (Input.GetButtonDown("Fire1"))
         {
-            Instantiate(RockPrefab, DirectionShoot.position, transform.rotation);
+            if (currentRocks >= 1)
+            {
+                Instantiate(RockPrefab, DirectionShoot.position, transform.rotation);
+                currentRocks = currentRocks - 1;
+            }
+            
+
         }
-             
+
+        if (Input.GetKeyDown("s"))
+            if (currentRocks <= maxRocks)
+            {
+                currentRocks = currentRocks + 1;
+            }
+
+
+
     }
 
     
@@ -82,8 +106,11 @@ public class Explorer : MonoBehaviour
             grounded = true;
             
         }
+        
 
     }
+
+    
 
 
 }
