@@ -12,12 +12,12 @@ public class Explorer : MonoBehaviour
     public Rock RockPrefab;
     public Transform DirectionShoot;
     public bool FacingRight;
-    private Inventory inventory;
+    
     public int hamt = 5;
     public int maxRocks = 4;
     private int currentRocks;
 
-    [SerializeField] private UIInventory uiInventory;
+    
   
    
 
@@ -27,9 +27,7 @@ public class Explorer : MonoBehaviour
     {
         currentRocks = 4;
         rb = GetComponent<Rigidbody2D>();
-        inventory = new Inventory();
-
-        uiInventory.SetInventory(inventory);
+        
         
     }
 

@@ -12,6 +12,7 @@ public class ExplorerHealth : MonoBehaviour
 
     private Transform ExplorerTransform;
     public AttemptsScore attemptsScore;
+    
 
 
 
@@ -31,10 +32,12 @@ public class ExplorerHealth : MonoBehaviour
         if (health <= 0)
         {
             attemptsScore.AddScore();
+            
             ExplorerTransform.position = LevelManager.instance.respawnPoint.position;
             health = maxHealth;
 
             hp.text = health.ToString();
+
             
         }
     }

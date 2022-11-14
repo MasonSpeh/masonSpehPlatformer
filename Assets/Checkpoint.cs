@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class health : MonoBehaviour
+public class Checkpoint : MonoBehaviour
 {
-    
-
-    public ExplorerHealth explorerHealth;
+    public RespawnPoint respawnp;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,18 +19,11 @@ public class health : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
-
         if (collision.gameObject.tag == "Player")
         {
-            explorerHealth.AddHealth();
+            respawnp.Checkpoint1();
 
             Destroy(gameObject);
-
-
         }
-
     }
-
-    
 }

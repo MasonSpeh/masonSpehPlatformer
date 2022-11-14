@@ -1312,16 +1312,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'A,D - Move left and right
-
-    W - Jump (tap twice for double jump and
-    continue to tap to jump upside down or on walls
-
-
-    Space - Shoot
-
-    Q -
-    Lights/unlights torch'
+  m_text: "A,D - Move left and right\nW - Jump (tap twice for double jump and continue
+    to tap to jump upside down or on walls\n\nSpace - Throw Rock \nS - Reload Rock
+    (max 4)\nQ - Lights/unlights torch"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1457,7 +1450,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Navigate through each cave while avoiding enemies. Enemies will stop moving
-    when you turn off light, however you can still move. You will have to explore
+    when you turn off light(Q), however you can still move. You will have to explore
     deeply and travel in all directions to find the goal: the purple diamond. This
     game was designed to be played carefully, take your time and remember your surroundings.'
   m_isRightToLeft: 0
